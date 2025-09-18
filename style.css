@@ -8,27 +8,24 @@
    font-family: Nunito;
 }
 
-body {
-   padding: 0 3vw;
-}
-
 main {
-   min-height: 100vh;
+   min-height: 100%;
    width: 100%;
+   padding: 0 3vmax;
 }
 
-#nav {
+#nav{
+   top: 0;
    display: flex;
-   height: 10vh;
+   position: sticky;
    background-color: white;
-   align-items: center;
-   position: fixed;
-   justify-content: space-between;
-   border-bottom: 2px solid grey;
-   border-radius: 0 0 3vh 3vh;
-   padding: 0 3vw;
-   width: 94vw;
    z-index: 9;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1vw 3vw;
+    border-bottom: 2px solid grey;
+   border-radius: 0 0 3vmin 3vmin;
 }
 
 #nav ul {
@@ -48,22 +45,27 @@ main {
    font-weight: 700;
 }
 
+#nav .menubtn {
+   display: none;
+   font-size: 5vw;
+   cursor: pointer;
+}
 #section-home {
-   min-height: 100vh;
    display: flex;
-   padding-top: 10vh;
+   justify-content: space-between;
    position: relative;
+   
 }
 
 #section-home .sec1 {
-   height: inherit;
    align-content: center;
-   width: 53vw;
+   width: 42vmax;
 }
 
 #section-home .sec1 h2 {
-   margin-top: 5vh;
+   margin-top: 5vmin;
    font-weight: 400;
+   font-size: 1.5rem;
 }
 
 #section-home .sec1 h2 span {
@@ -76,26 +78,26 @@ main {
 
 }
 
-
-#section-home .sec2 {
-   height: inherit;
-   align-content: center;
-   width: 40vw;
-   background-color: red;
+#section-home .sec2{
+   display: flex;
+   position: relative;
+   width: 42vmax;
+   justify-content: flex-end;
 }
-
-#section-home .sec2 .bgi {
-   height: 90vh;
-   width: 100%;
-   background-color: #fff;
-   background-size: fill;
+#section-home .sec2 .bgimage {
+   width: 30vmax;
    overflow: hidden;
+   
+   background-image: url("/imgs/imgg1.jpg");
+   background-size: cover;  
+   background-position: center; 
+   background-repeat: no-repeat;
+   border-radius: 15px;
+   object-fit: cover;
 }
+#section-home .sec2 .bgimage img {
 
-#section-home .sec2 .bgi img {
-
-   width: 60vw;
-   /* height: 90vh; */
+   overflow: hidden;
 }
 
 #section-about {
@@ -436,21 +438,48 @@ form textarea {
 }
 
 @media screen and (max-width : 600px) {
+   #nav .menubtn {
+      display: inline;
+      font-size: 25px;
+      cursor: pointer;
+   }
+   
+   #nav ul {
+      display: none;
+   }
+
+   #section-home{
+      flex-direction: column-reverse;
+      text-align: center;
+      text-wrap: nowrap;
+   }
    #section-home .sec1 {
       width: 100%;
       text-align: center;
    }
-
-   #section-home {
-      padding-top: 0;
-
-      font-size: 12px;
+   #section-home .sec1 h2 {
+      margin-top: 3vmin;
+      text-wrap: nowrap;
+      font-size: 1rem;
    }
 
-   #section-home span {
-      font-size: 15px;
+   #section-home .sec1 .btns {
+      margin-top: 3vmin;
+      text-wrap: nowrap;
+      
    }
-
+   #section-home .sec2 {
+      width: 100%;
+      height: 50vmax;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+   }
+    #section-home .sec2 .bgimage {
+      width: 90%;
+      height: 50vmax;
+      top: 0;
+}
    #nav .logo {
       font-size: 1.25rem;
    }
