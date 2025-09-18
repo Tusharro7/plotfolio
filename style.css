@@ -404,40 +404,7 @@ form textarea {
    height: 100%;
 }
 
-
-
 @media screen and (max-width : 650px) {
-   #section-home {
-      display: flex;
-      flex-direction: column-reverse;
-      display: flex;
-      position: relative;
-      align-items: center;
-   }
-
-   #section-home .sec2 {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-   }
-
-   #section-home .sec2 .bgi {
-      width: 45%;
-      height: 60vw;
-      object-fit: cover;
-   }
-
-   #section-home .sec2 .bgi img {
-      #section-home .sec2 .bgi img {
-         width: 45%;
-         height: 60vw;
-      }
-   }
-}
-
-@media screen and (max-width : 600px) {
    #nav .menubtn {
       display: inline;
       font-size: 25px;
